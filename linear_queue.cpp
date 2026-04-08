@@ -44,18 +44,36 @@ void display() {
 
 int main()
 {
-    enqueue(10);
-    enqueue(20);
+int choice,value;
+while(true)
+{
+    cout<<"\nChosse option: \n";
+    cout<<"1.Enqueue\n";
+    cout<<"2.Dqueue\n";
+    cout<<"3.Peek\n";
+    cout<<"4.Dislay\n";
+    cout<<"5.Exit\n";
+    cout<<"Enter your Choice: \n";
+    cin>>choice;
 
-     display();
+    switch(choice){
+  case 1:
+    cout<<" Enter value; ";
+    cin>>value;
+    enqueue(value);
+    break;
+  case 2:
+      dequeue();
+      break;
 
-    dequeue();
-    dequeue();
-
+  case 3:
     display();
-
-    enqueue(60);
-    display();
-
+    break;
+  case 4:
+    exit(0);
+  default:
+    cout<< "Invalid choice! "<< endl;
+    }
+}
 
 }
